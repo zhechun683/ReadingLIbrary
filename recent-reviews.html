@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Book Review Club</title>
+    <style>
+        /* Add your CSS styling here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        #top-bar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        #top-bar2 {
+            background-color: #FAD02E;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #search-box {
+            margin: 20px;
+        }
+        #left-sidebar {
+            float: left;
+            width: 15%;
+            background-color: #ddd;
+            padding: 50px;
+        }
+        #content {
+            float: left;
+            width: 50%;
+            padding: 20px;
+        }
+        #right-sidebar {
+            float: left;
+            width: 25%;
+            background-color: #ffffff;
+            padding: 20px;
+        }
+        #user-info {
+            text-align: center;
+        }
+        #user-stats {
+            margin-top: 10px;
+        }
+        #book-review-section {
+            margin-top: 20px;
+        }
+        #image-gallery {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="top-bar">
+        <h1>Book Review Club</h1>
+    </div>
+    <div id="top-bar2">
+        <button onclick="navigate('home')">Homepage</button>
+        <button onclick="navigate('all-books')">All books</button>
+        <button onclick="navigate('recent-reviews')">recent book reviews</button>
+        <input type="text" placeholder="search">
+        <button onclick="navigate('user-login')">user login</button>
+        <button onclick="navigate('admin-login')">Administrator login</button>
+    </div>
+
+    <div id="left-sidebar">
+        <ul>
+            <li>Index</li>
+            <li>Post</li>
+            <li>Like</li>
+        </ul>
+    </div>
+
+    <div id="content">
+        <!-- Content goes here -->
+        <div id="user-info">
+            <img src="5.jpg" alt="User Avatar" width="80" height="80">
+            <h2>Username</h2>
+        </div>
+
+        <div id="user-stats">
+            <p>9 Follow 1 Following 27 posts</p >
+        </div>
+
+        <div id="book-review-section">
+            <h3>Book Review</h3>
+        </div>
+
+        <div id="image-gallery">
+            <!-- Add three images here -->
+            <img src="2.png" alt="Image 1" width="100">
+            <img src="3.png" alt="Image 2" width="100">
+            <img src="4.png" alt="Image 3" width="100">
+        </div>
+    </div>
+
+    <div id="right-sidebar">
+        <!-- Right sidebar content goes here -->
+    </div>
+
+</body>
+<script>
+    function navigate(page) {
+        // Implement your page navigation logic here
+        console.log('Navigating to', page);
+        location.href = page + ".html"
+    }
+</script>
+</html>

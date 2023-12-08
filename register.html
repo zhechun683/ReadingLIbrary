@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Book Review Club</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        #top-bar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        #top-bar2 {
+            background-color: #FAD02E;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #register-container {
+            margin: 50px auto;
+            width: 300px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #register-form {
+            margin-bottom: 20px;
+            text-align: center; /* Center the form */
+        }
+        button {
+            display: block; /* Make the button a block element */
+            margin: 0 auto; /* Center the button */
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="top-bar">
+        
+        <h1>Book Review Club</h1>
+    </div>
+    <div id="top-bar2">
+        <button onclick="navigate('home')">Homepage</button>
+        <button onclick="navigate('all-books')">All books</button>
+        <button onclick="navigate('recent-reviews')">recent book reviews</button>
+        <input type="text" placeholder="search">
+        <button onclick="navigate('user-login')">user login</button>
+        <button onclick="navigate('admin-login')">Administrator login</button>
+    </div>
+    <div id="register-container">
+        <div id="register-form">
+            <h2>Register</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required><br>
+
+                <button type="submit">Register</button>
+            </form>
+            <p>Already have an account? <a href="user-login.html">Login here</a></p >
+        </div>
+    </div>
+
+</body>
+<script>
+    function navigate(page) {
+        // Implement your page navigation logic here
+        console.log('Navigating to', page);
+        location.href = page + ".html"
+    }
+</script>
+</html>

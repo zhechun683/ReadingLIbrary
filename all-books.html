@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Review Club</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        #top-bar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #top-bar2 {
+            background-color: #FAD02E;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #editor-choice {
+            background-color: #ddd;
+            padding: 20px;
+            text-align: center;
+        }
+        #user-section {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        #user-image {
+            flex: 0 0 48%;
+            padding-right: 20px;
+        }
+        #user-details {
+            flex: 0 0 48%;
+            padding-left: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-top: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        #interaction-stats {
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="top-bar">
+        <h1>Book Review Club</h1>
+
+        <button>Login</button>
+    </div>
+    <div id="top-bar2">
+        <button onclick="navigate('home')">Homepage</button>
+        <button onclick="navigate('all-books')">All books</button>
+        <button onclick="navigate('recent-reviews')">recent book reviews</button>
+        <input type="text" placeholder="search">
+        <button onclick="navigate('user-login')">user login</button>
+        <button onclick="navigate('admin-login')">Administrator login</button>
+    </div>
+
+    <div id="editor-choice">
+        <h2>Editor's Choice</h2>
+    </div>
+
+    <div id="user-section">
+        <div id="user-image">
+            <!-- Add your image here -->
+        </div>
+        <div id="user-details">
+            <p>Username</p >
+            <p>1/1/2023</p >
+        </div>
+    </div>
+
+    <textarea placeholder="Write your review..."></textarea>
+
+    <div id="interaction-stats">
+        <p>Likes: 34</p >
+        <p>Comments: 14</p >
+    </div>
+
+</body>
+<script>
+    function navigate(page) {
+        // Implement your page navigation logic here
+        console.log('Navigating to', page);
+        location.href = page + ".html"
+    }
+</script>
+</html>
